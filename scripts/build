@@ -32,7 +32,7 @@ BUILD_ARCH=$(uname -i)
 
 SSH_PUBLIC_KEY_FILE=${SSH_PUBLIC_KEY_FILE:-${BUILDDIR}/id_demo.pub}
 PASSWORD_FILE=${PASSWORD_FILE:-${BUILDDIR}/password}
-GITOPS_REPO=${GITOPS_REPO:-https://github.com/redhat-et/microshift-config}
+GITOPS_REPO=${GITOPS_REPO:-https://github.com/eformat/microshift-config}
 OSTREE_SERVER_URL=${OSTREE_SERVER_URL:-http://${PRIMARY_IP}:8080}
 OCP_PULL_SECRET_FILE=${OCP_PULL_SECRET_FILE:-$HOME/.pull-secret.json}
 [ ! -s "${OCP_PULL_SECRET_FILE}" ] && usage "Empty or missing pull secret file ${OCP_PULL_SECRET_FILE}"
