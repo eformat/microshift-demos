@@ -1,10 +1,10 @@
 sudo tee /etc/rhc/config.toml > /dev/null <<EOF
 # yggdrasil global configuration settings
-broker = ["wss://connect.cloud.stage.redhat.com:443"]
+broker = ["wss://connect.cloud.redhat.com:443"]
 cert-file = "/etc/pki/consumer/cert.pem"
 key-file = "/etc/pki/consumer/key.pem"
 log-level = "trace"
-data-host = "cert.cloud.stage.redhat.com"
+data-host = "cert.cloud.redhat.com"
 topic-prefix = "redhat/insights"
 EOF
 
@@ -14,7 +14,7 @@ auto_config=False
 username=insights-qa
 password=redhatqa
 legacy_upload=False
-base_url=cert.cloud.stage.redhat.com/api
+base_url=cert.cloud.redhat.com/api
 cert_verify=True
 proxy=http://squid.corp.redhat.com:3128
 EOF
