@@ -68,12 +68,13 @@ firewall-offline-cmd --zone=trusted --add-source=169.254.169.1
 
 %post --log=/var/log/anaconda/insights-on-reboot-unit-install.log --interpreter=/usr/bin/bash --erroronfail
 
-INSIGHTS_CLIENT_OVERRIDE_DIR=/etc/systemd/system/insights-client.service.d
-INSIGHTS_CLIENT_OVERRIDE_FILE=$INSIGHTS_CLIENT_OVERRIDE_DIR/override.conf
+#INSIGHTS_CLIENT_OVERRIDE_DIR=/etc/systemd/system/insights-client.service.d
+#INSIGHTS_CLIENT_OVERRIDE_FILE=$INSIGHTS_CLIENT_OVERRIDE_DIR/override.conf
 
-if [ ! -f $INSIGHTS_CLIENT_OVERRIDE_FILE ]; then
-    mkdir -p $INSIGHTS_CLIENT_OVERRIDE_DIR
-    cat > $INSIGHTS_CLIENT_OVERRIDE_FILE << EOF 
+#if [ ! -f $INSIGHTS_CLIENT_OVERRIDE_FILE ]; then
+#    mkdir -p $INSIGHTS_CLIENT_OVERRIDE_DIR
+#    cat > $INSIGHTS_CLIENT_OVERRIDE_FILE << EOF
+
 [Unit]
 Requisite=greenboot-healthcheck.service
 After=network-online.target greenboot-healthcheck.service
