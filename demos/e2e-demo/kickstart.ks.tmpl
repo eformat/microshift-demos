@@ -75,14 +75,14 @@ firewall-offline-cmd --zone=trusted --add-source=169.254.169.1
 #    mkdir -p $INSIGHTS_CLIENT_OVERRIDE_DIR
 #    cat > $INSIGHTS_CLIENT_OVERRIDE_FILE << EOF
 
-[Unit]
-Requisite=greenboot-healthcheck.service
-After=network-online.target greenboot-healthcheck.service
+#[Unit]
+#Requisite=greenboot-healthcheck.service
+#After=network-online.target greenboot-healthcheck.service
 
-[Install]
-WantedBy=multi-user.target
-EOF
-    systemctl enable insights-client.service
-fi
+#[Install]
+#WantedBy=multi-user.target
+#EOF
+#    systemctl enable insights-client.service
+#fi
 
 %end
